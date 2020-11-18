@@ -34,19 +34,23 @@ const Nweet = ({nweetObj, isOwner }) => {
         {editing ? ( 
                 <>
                 <form onSubmit={onSubmit} className="container nweetEdit">
-                <input type= "text" placeholder="Edit your NWeet" value={newNweet} required onChange={onChange} className="formInput"/> 
-                <input type="submit" value="Update Nweet"/>
+                    <input type= "text" placeholder="Edit your NWeet" value={newNweet} required onChange={onChange} className="formInput"/> 
+                    <input type="submit" value="Update Nweet" className="formBtn" />
                 </form> 
                 <button onClick ={toggleEditing} className="formBtn">Cancel</button>
                 </>
                 ) : (
                 <>
                 <h4>{nweetObj.text}</h4>
-                {nweetObj.attachmentUrl && <img src={nweetObj.attachmentUrl} width="50px" height="50px"/>}
+                {nweetObj.attachmentUrl && <img src={nweetObj.attachmentUrl}/>}
             {isOwner && (
             <>
-            <button onClick={onDeleteClick}>Delete Nweet</button>
-            <button onClick={toggleEditing}>Edit Nweet</button>
+            <div class="nweet__actions">
+                <span onClick={onDeleteClick}>Delete Nweet</span>
+            {/* </div>
+            <div> */}
+                <span onClick={toggleEditing}>Edit Nweet</span>
+            </div>
             </>
             )}</>
                 )}

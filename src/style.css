@@ -24,13 +24,29 @@ a{
     text-decoration: none;
     color:inherit;
 }
+nav ul{
+    position: relative;
+}
+.Navli:first-child{
+    position: absolute;
+    left:10px;
+    top:10px;
+}
+.Navli{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    list-style: none;
+}
+
+
 
 form{
     width:100%;
 }
 
 .nweet-input::placeholder{
-    color:white;
+    color: gray;
     opacity: 0.9;
 }
 .container{
@@ -41,7 +57,7 @@ form{
     border: 1px solid black;
     text-align: center;
     background-color: white;
-    color: black;
+    /* color: black; */
 }
 
 .formInput{
@@ -52,7 +68,6 @@ form{
     text-align: center;
     background-color: white;
     color: black;
-
 }
 
 .formBtn{
@@ -142,4 +157,123 @@ form{
     display: flex;
     flex-direction: column;
     justify-content: center;
+}
+
+.factoryForm__attachment{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.factoryForm__attachment img{
+    height: 80px;
+    width:80px;
+    border-radius: 40px;
+}
+
+.factoryForm__clear{
+    color:#04aaff;
+    cursor:pointer;
+    text-align: center;
+}
+
+/* Nweet */
+
+.nweetEdit .formBtn{
+    cursor: pointer;
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+
+.nweet{
+    margin-bottom: 20px;
+    background-color: white;
+    width: 100%;
+    max-width: 320px;
+    padding: 20px;
+    border-radius: 10px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    color: rgba(0, 0, 0, 0.8);
+}
+
+.nweet h4{
+    font-size: 14px;
+}
+
+.nweet img{
+    right: -10px;
+    top: 20px;
+    position: absolute;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    margin-top: 10px;
+}
+
+.nweet__actions{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.nweet__actions span{
+    cursor: pointer;
+    font-size: 10px;    
+}
+.nweet__actions span:first-child{
+    padding-right:20px;
+}
+
+
+/* Auth */
+
+.authContainer{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.authBtn{
+    cursor: pointer;
+    border-radius: 20px;
+    border: none;
+    padding: 10px 0;
+    font-size: 12px;
+    text-align: center;
+    width: 150px;
+    background-color: white;
+    cursor: pointer;
+}
+
+/* AuthForm */
+
+.authInput{
+    max-width: 320px;
+    width: 100%;
+    padding: 10px;
+    border-radius: 30px;
+    background-color: rgba(255 , 255, 255, 1);
+    margin-bottom: 10px;
+    font-size: 12px;
+    color: black;
+}
+
+.authSubmit{
+    text-align: center;
+    background-color: #04aaff;
+    font-weight: 500;
+    font-size: 12px;
+}
+
+.authSwitch {
+    color: #04aaff;
+    cursor: pointer;
+    margin-top: 10px;
+    margin-bottom: 50px;
+    display: block;
+    font-size: 12px;
+    text-decoration: underline;
 }
